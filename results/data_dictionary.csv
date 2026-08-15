@@ -1,0 +1,14 @@
+Variable,Meaning,Source
+project_id,Unique project identifier created for this study,Derived
+company_id,Original company identifier,objects.csv
+startup_name,Company name,objects.csv
+sector,Startup category,objects.csv
+country_code,Country of company,objects.csv
+status,Company operating status,objects.csv
+funding_rounds,Number of funding rounds,objects.csv
+funding_total_usd,Total historical funding,objects.csv
+investment_cost,Funding-based investment cost proxy,Derived
+funding_band,Low/Medium/High/Very High funding classification,Derived
+acquisition,"1 if acquired, otherwise 0",acquisitions.csv
+ipo,"1 if IPO recorded, otherwise 0",ipos.csv
+funding_duration_years,Years between first and last funding,Derived

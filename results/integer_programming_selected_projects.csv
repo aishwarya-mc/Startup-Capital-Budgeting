@@ -1,0 +1,98 @@
+project_id,startup_name,sector,investment_cost,investment_potential_score,budget
+P001,Bolt,software,16000.0,17.5,25000000
+P002,QRcao,software,7208.0,5.0,25000000
+P003,BestVendor,software,4200000.0,63.33,25000000
+P011,Spartan Bioscience,biotech,110000.0,17.5,25000000
+P012,Intrepid Bioinformatics,biotech,875000.0,33.33,25000000
+P013,Salutaris Medical Devices,biotech,3099128.0,49.17,25000000
+P021,Jazzdesk,web,129690.0,17.5,25000000
+P022,OpenChime,web,700000.0,17.5,25000000
+P031,PhoneTell,mobile,1000000.0,17.5,25000000
+P032,Infinite Monkeys,mobile,600000.0,41.67,25000000
+P034,Cycell,mobile,2535759.0,33.33,25000000
+P041,Currently,ecommerce,140000.0,17.5,25000000
+P042,Yellowsmith,ecommerce,850000.0,17.5,25000000
+P043,SixthEye,ecommerce,2204171.0,57.5,25000000
+P051,Live Mobile,enterprise,670086.0,25.0,25000000
+P061,Explore Engage,games_video,200000.0,17.5,25000000
+P062,Roll20,games_video,40000.0,17.5,25000000
+P072,DishOpinion,advertising,500000.0,17.5,25000000
+P073,Local Yokel Media,advertising,2288352.0,41.67,25000000
+P081,KOPIS MOBILE,hardware,50000.0,17.5,25000000
+P082,Orthocone,hardware,122000.0,17.5,25000000
+P091,Cold Plasma Medical Technologies,medical,1416163.0,64.17,25000000
+P092,CamStent,medical,1375753.0,33.33,25000000
+P095,DoctorAtWork.com,medical,1800000.0,49.17,25000000
+P001,Bolt,software,16000.0,17.5,50000000
+P002,QRcao,software,7208.0,5.0,50000000
+P003,BestVendor,software,4200000.0,63.33,50000000
+P011,Spartan Bioscience,biotech,110000.0,17.5,50000000
+P012,Intrepid Bioinformatics,biotech,875000.0,33.33,50000000
+P013,Salutaris Medical Devices,biotech,3099128.0,49.17,50000000
+P021,Jazzdesk,web,129690.0,17.5,50000000
+P022,OpenChime,web,700000.0,17.5,50000000
+P025,ID.me,web,3300000.0,25.0,50000000
+P031,PhoneTell,mobile,1000000.0,17.5,50000000
+P032,Infinite Monkeys,mobile,600000.0,41.67,50000000
+P033,Between,mobile,4000000.0,41.67,50000000
+P034,Cycell,mobile,2535759.0,33.33,50000000
+P041,Currently,ecommerce,140000.0,17.5,50000000
+P042,Yellowsmith,ecommerce,850000.0,17.5,50000000
+P043,SixthEye,ecommerce,2204171.0,57.5,50000000
+P051,Live Mobile,enterprise,670086.0,25.0,50000000
+P052,HireArt,enterprise,1400000.0,17.5,50000000
+P061,Explore Engage,games_video,200000.0,17.5,50000000
+P062,Roll20,games_video,40000.0,17.5,50000000
+P064,Frolik,games_video,1650000.0,17.5,50000000
+P065,AwesomenessTV,games_video,3500000.0,32.5,50000000
+P071,Dynadmic,advertising,1500000.0,17.5,50000000
+P072,DishOpinion,advertising,500000.0,17.5,50000000
+P073,Local Yokel Media,advertising,2288352.0,41.67,50000000
+P075,Connexity,advertising,5000000.0,49.17,50000000
+P081,KOPIS MOBILE,hardware,50000.0,17.5,50000000
+P082,Orthocone,hardware,122000.0,17.5,50000000
+P091,Cold Plasma Medical Technologies,medical,1416163.0,64.17,50000000
+P092,CamStent,medical,1375753.0,33.33,50000000
+P093,EMKinetics,medical,2982624.0,33.33,50000000
+P094,Ideal Implant,medical,1664500.0,17.5,50000000
+P095,DoctorAtWork.com,medical,1800000.0,49.17,50000000
+P001,Bolt,software,16000.0,17.5,75000000
+P002,QRcao,software,7208.0,5.0,75000000
+P003,BestVendor,software,4200000.0,63.33,75000000
+P011,Spartan Bioscience,biotech,110000.0,17.5,75000000
+P012,Intrepid Bioinformatics,biotech,875000.0,33.33,75000000
+P013,Salutaris Medical Devices,biotech,3099128.0,49.17,75000000
+P014,Sage Science,biotech,4020000.0,33.33,75000000
+P015,CryoXtract Instruments,biotech,3800000.0,33.33,75000000
+P021,Jazzdesk,web,129690.0,17.5,75000000
+P022,OpenChime,web,700000.0,17.5,75000000
+P031,PhoneTell,mobile,1000000.0,17.5,75000000
+P032,Infinite Monkeys,mobile,600000.0,41.67,75000000
+P033,Between,mobile,4000000.0,41.67,75000000
+P034,Cycell,mobile,2535759.0,33.33,75000000
+P041,Currently,ecommerce,140000.0,17.5,75000000
+P042,Yellowsmith,ecommerce,850000.0,17.5,75000000
+P043,SixthEye,ecommerce,2204171.0,57.5,75000000
+P044,Commerce Sciences,ecommerce,1800000.0,17.5,75000000
+P045,Jifiti.com,ecommerce,3500000.0,25.0,75000000
+P051,Live Mobile,enterprise,670086.0,25.0,75000000
+P052,HireArt,enterprise,1400000.0,17.5,75000000
+P053,AeroFS,enterprise,5500000.0,49.17,75000000
+P055,Vivocha,enterprise,1934400.0,17.5,75000000
+P061,Explore Engage,games_video,200000.0,17.5,75000000
+P062,Roll20,games_video,40000.0,17.5,75000000
+P064,Frolik,games_video,1650000.0,17.5,75000000
+P065,AwesomenessTV,games_video,3500000.0,32.5,75000000
+P071,Dynadmic,advertising,1500000.0,17.5,75000000
+P072,DishOpinion,advertising,500000.0,17.5,75000000
+P073,Local Yokel Media,advertising,2288352.0,41.67,75000000
+P074,AlmondNet,advertising,5407657.0,41.67,75000000
+P075,Connexity,advertising,5000000.0,49.17,75000000
+P081,KOPIS MOBILE,hardware,50000.0,17.5,75000000
+P082,Orthocone,hardware,122000.0,17.5,75000000
+P085,Packet Digital,hardware,2000800.0,17.5,75000000
+P091,Cold Plasma Medical Technologies,medical,1416163.0,64.17,75000000
+P092,CamStent,medical,1375753.0,33.33,75000000
+P093,EMKinetics,medical,2982624.0,33.33,75000000
+P094,Ideal Implant,medical,1664500.0,17.5,75000000
+P095,DoctorAtWork.com,medical,1800000.0,49.17,75000000
