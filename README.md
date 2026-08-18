@@ -1,4 +1,3 @@
-````markdown
 # Startup Capital Budgeting & Portfolio Optimization
 
 ## Project Overview
@@ -48,7 +47,7 @@ Goal Programming
 Model Comparison
         ↓
 User Interface
-````
+```
 
 ---
 
@@ -200,6 +199,3 @@ The final system will allow users to:
 6. Compare optimization results.
 
 The final goal is to develop an interactive **startup investment decision-support system**.
-
-```
-```
