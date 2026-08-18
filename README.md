@@ -1,24 +1,32 @@
 ````markdown
-# Startup Capital Budgeting and Portfolio Optimization
+# Startup Capital Budgeting & Portfolio Optimization
 
-## Overview
+## Project Overview
 
-A data-driven startup investment optimization framework that uses Operations Research techniques to select an optimal portfolio under limited capital.
+This project focuses on optimizing startup investment decisions under a limited budget using Operations Research techniques.
 
-The project uses a publicly available startup dataset, performs statistical analysis, generates an Investment Potential Score, and applies optimization techniques for investment selection.
+A publicly available startup dataset is analyzed to identify relevant investment patterns and create a structured modelling dataset. Each selected startup is assigned an Investment Potential Score, which is then used to optimize the selection of startups under different budget scenarios.
+
+The project currently implements **Integer Programming** and proposes **Goal Programming** as a multi-objective extension.
+
+---
 
 ## Problem Statement
 
-How can we select the most promising combination of startups while maximizing investment potential under a limited investment budget?
+How can an investor select the most promising combination of startups while making the best use of a limited investment budget?
+
+---
 
 ## Objectives
 
-- Prepare and analyze startup investment data.
-- Create a structured 100-project modelling dataset.
-- Generate Investment Potential Scores.
+- Analyze publicly available startup investment data.
+- Prepare a structured dataset for optimization.
+- Generate an Investment Potential Score for startups.
 - Optimize startup selection using Integer Programming.
-- Extend the model using Goal Programming.
-- Develop an interactive decision-support interface.
+- Extend the optimization using Goal Programming.
+- Develop an interactive decision-support system.
+
+---
 
 ## Methodology
 
@@ -27,7 +35,7 @@ Public Startup Dataset
         ↓
 Data Preparation
         ↓
-100-Project Dataset
+100-Project Modelling Dataset
         ↓
 Statistical Analysis
         ↓
@@ -42,83 +50,133 @@ Model Comparison
 User Interface
 ````
 
+---
+
+## Dataset
+
+The project uses a publicly available startup investment dataset containing information related to:
+
+* Startups and companies
+* Funding rounds
+* Investments
+* Acquisitions
+* IPOs
+* Funds
+* People and organizations
+* Startup sectors and outcomes
+
+The raw data is processed to create a **100-project modelling dataset** suitable for optimization.
+
+---
+
+## Statistical Analysis
+
+Exploratory analysis is performed to understand:
+
+* Investment distribution
+* Funding patterns
+* Sector-wise investment
+* Startup outcomes
+* Relationship between funding and investment
+
+The analysis is available in the `notebooks/` directory, with generated visualizations stored in `results/`.
+
+---
+
+## Investment Potential Scoring
+
+An Investment Potential Score is assigned to each startup using relevant startup and investment indicators.
+
+This score represents the relative investment potential of each project and is used as the primary objective in the Integer Programming model.
+
+The scored dataset is stored in:
+
+`data/processed/startup_projects_scored.csv`
+
+---
+
 ## Integer Programming
 
-Binary decision variable:
+Binary Integer Programming is used to select startups from the 100-project dataset.
 
-```text
-xᵢ = 1 → startup selected
-xᵢ = 0 → startup not selected
-```
+Each startup has a binary selection decision:
 
-### Objective
+* **1** → Startup selected
+* **0** → Startup not selected
 
-[
-\max \sum_{i=1}^{100} P_i x_i
-]
+The model aims to maximize the total Investment Potential Score while ensuring that the selected investments remain within the available budget.
 
-### Budget Constraint
+The model is evaluated under multiple budget scenarios:
 
-[
-\sum_{i=1}^{100} C_i x_i \leq B
-]
+* $25 Million
+* $50 Million
+* $75 Million
 
-Where:
-
-* (P_i) = Investment Potential Score
-* (C_i) = Investment Cost
-* (B) = Available Budget
+---
 
 ## Goal Programming
 
-Goal Programming is proposed as a multi-objective extension considering:
+Goal Programming is proposed as a multi-objective extension of the Integer Programming model.
+
+Instead of focusing only on investment potential, the proposed model will consider multiple goals such as:
 
 * Investment potential
 * Investment risk
 * Strategic alignment
 
-Basic formulation:
+The model will identify a portfolio that provides a balanced solution across these objectives.
 
-[
-Actual + d^- - d^+ = Target
-]
-
-Goal Programming will be implemented and compared with Integer Programming in the next phase.
+---
 
 ## Project Status
 
-### Implemented
+### Completed
 
-* Dataset preparation
+* Dataset exploration
+* Data preparation
+* 100-project modelling dataset
 * Statistical analysis
 * Investment Potential Scoring
-* Binary Integer Programming
+* Integer Programming
 * Multiple budget scenarios
 * Optimization results
 
-### Future Work
+### Planned
 
-* Risk and strategic-alignment scoring
-* Goal Programming
-* IP vs GP comparison
+* Risk scoring
+* Strategic-alignment scoring
+* Goal Programming implementation
+* Integer Programming vs Goal Programming comparison
 * Sensitivity analysis
 * Interactive user interface
+
+---
 
 ## Project Structure
 
 ```text
 Startup-Capital-Budgeting/
+│
 ├── data/
 │   ├── raw/
 │   └── processed/
+│
 ├── notebooks/
+│
 ├── results/
+│
 ├── src/
+│   ├── inspect_data.py
+│   └── integer_programming.py
+│
 ├── docs/
+│
 └── README.md
 ```
 
-## Technologies
+---
+
+## Technologies Used
 
 * Python
 * Pandas
@@ -128,9 +186,20 @@ Startup-Capital-Budgeting/
 * PuLP
 * Git & GitHub
 
-## Expected Outcome
+---
 
-The final system will provide an interactive platform for loading startup data, generating statistics, selecting an optimization technique, and producing an optimized investment portfolio.
+## Future System
+
+The final system will allow users to:
+
+1. Load the startup dataset.
+2. View statistical information.
+3. Select an optimization technique.
+4. Specify an investment budget.
+5. Generate an optimized startup portfolio.
+6. Compare optimization results.
+
+The final goal is to develop an interactive **startup investment decision-support system**.
 
 ```
 ```
