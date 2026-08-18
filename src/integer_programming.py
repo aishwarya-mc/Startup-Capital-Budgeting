@@ -3,9 +3,7 @@ from pathlib import Path
 import pulp
 
 
-# ============================================================
 # INTEGER PROGRAMMING MODEL
-# ============================================================
 #
 # Decision variable:
 #   x_i = 1 if startup/project i is selected
@@ -35,12 +33,11 @@ import pulp
 # Mutual-exclusion and prerequisite relationships are
 # modelling assumptions because they are not provided
 # directly by the dataset.
-# ============================================================
 
 
-# ============================================================
+
+
 # 1. LOAD DATA
-# ============================================================
 
 project_root = Path(__file__).resolve().parent.parent
 
@@ -60,9 +57,7 @@ print("STARTUP CAPITAL BUDGETING - INTEGER PROGRAMMING")
 print(f"\nNumber of projects: {len(df)}")
 
 
-# ============================================================
 # 2. CREATE INVESTMENT POTENTIAL SCORE
-# ============================================================
 
 def normalize(series):
     min_value = series.min()
@@ -117,10 +112,7 @@ df["investment_potential_score"] = (
     df["investment_potential_score"].round(2)
 )
 
-
-# ============================================================
 # 3. INTEGER PROGRAMMING FUNCTION
-# ============================================================
 
 def solve_portfolio(budget):
 
@@ -138,18 +130,15 @@ def solve_portfolio(budget):
         for i in df.index
     }
 
-    # --------------------------------------------------------
+
     # OBJECTIVE
-    # --------------------------------------------------------
 
     model += pulp.lpSum(
         df.loc[i, "investment_potential_score"] * x[i]
         for i in df.index
     )
 
-    # --------------------------------------------------------
     # BUDGET CONSTRAINT
-    # --------------------------------------------------------
 
     model += (
         pulp.lpSum(
@@ -162,53 +151,51 @@ def solve_portfolio(budget):
 
     # --------------------------------------------------------
     # MUTUAL EXCLUSION
-    # P003 and P004 cannot both be selected.
-    # --------------------------------------------------------
+    # # P003 and P004 cannot both be selected.
+    # # --------------------------------------------------------
 
-    p3 = df.index[
-        df["project_id"] == "P003"
-    ].tolist()
+    # # p3 = df.index[
+    # #     df["project_id"] == "P003"
+    # # ].tolist()
 
-    p4 = df.index[
-        df["project_id"] == "P004"
-    ].tolist()
+    # # p4 = df.index[
+    # #     df["project_id"] == "P004"
+    # # ].tolist()
 
-    if p3 and p4:
-        model += (
-            x[p3[0]] + x[p4[0]] <= 1,
-            "Mutual_Exclusion_P003_P004"
-        )
+    # # if p3 and p4:
+    # #     model += (
+    # #         x[p3[0]] + x[p4[0]] <= 1,
+    # #         "Mutual_Exclusion_P003_P004"
+    #     )
 
     # --------------------------------------------------------
     # PREREQUISITE
     # P005 requires P004.
     # --------------------------------------------------------
 
-    p4 = df.index[
-        df["project_id"] == "P004"
-    ].tolist()
+    # p4 = df.index[
+    #     df["project_id"] == "P004"
+    # ].tolist()
 
-    p5 = df.index[
-        df["project_id"] == "P005"
-    ].tolist()
+    # p5 = df.index[
+    #     df["project_id"] == "P005"
+    # ].tolist()
 
-    if p4 and p5:
-        model += (
-            x[p5[0]] <= x[p4[0]],
-            "Prerequisite_P005_requires_P004"
-        )
+    # if p4 and p5:
+    #     model += (
+    #         x[p5[0]] <= x[p4[0]],
+    #         "Prerequisite_P005_requires_P004"
+    #     )
 
-    # --------------------------------------------------------
     # SOLVE
-    # --------------------------------------------------------
+
 
     solver = pulp.PULP_CBC_CMD(msg=False)
 
     model.solve(solver)
 
-    # --------------------------------------------------------
     # GET SELECTED PROJECTS
-    # --------------------------------------------------------
+
 
     selected_indices = [
         i for i in df.index
@@ -240,11 +227,7 @@ def solve_portfolio(budget):
         total_potential,
         budget_used
     )
-
-
-# ============================================================
 # 4. RUN DIFFERENT BUDGET SCENARIOS
-# ============================================================
 
 budgets = [
     25_000_000,
@@ -315,11 +298,7 @@ for budget in budgets:
         "budget_used_percent": budget_used,
         "total_potential_score": total_potential
     })
-
-
-# ============================================================
 # 5. SAVE BUDGET SUMMARY
-# ============================================================
 
 results_dir = project_root / "results"
 
@@ -340,10 +319,7 @@ summary_df.to_csv(
     index=False
 )
 
-
-# ============================================================
 # 6. SAVE SELECTED PROJECTS
-# ============================================================
 
 if all_selected_projects:
 
@@ -362,10 +338,7 @@ if all_selected_projects:
         index=False
     )
 
-
-# ============================================================
 # 7. SAVE SCORED DATASET
-# ============================================================
 
 scored_file = (
     project_root
@@ -379,10 +352,7 @@ df.to_csv(
     index=False
 )
 
-
-# ============================================================
 # 8. FINAL OUTPUT
-# ============================================================
 
 print("FILES CREATED")
 
