@@ -1,0 +1,23 @@
+{
+  "python": "3.9.0",
+  "platform": "Windows-10-10.0.26100-SP0",
+  "packages": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "pulp": "3.3.1",
+    "matplotlib": "3.9.4",
+    "scipy": "1.13.1"
+  },
+  "input_sha256": "a32762d4be16af4280bf15cbbc4ec51694d0ce22225b79e7be21b01078297b15",
+  "portfolios_validated": 60,
+  "checks": 1586,
+  "passed": 1586,
+  "tolerances": {
+    "binary": 1e-06,
+    "budget_usd": 0.01,
+    "totals_points": 1e-05,
+    "goal_equations_points": 0.001,
+    "independent_GP_objective": 1e-06,
+    "independent_IP_payoff_objective": 0.001
+  }
+}

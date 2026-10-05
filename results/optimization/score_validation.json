@@ -1,0 +1,15 @@
+{
+  "rows": 100,
+  "original_columns_unchanged": true,
+  "scores_finite_and_in_range": true,
+  "equal_inputs_equal_risk": true,
+  "risk_monotone_in_each_component": true,
+  "risk_rounds_bounds": [
+    1.0,
+    5.0
+  ],
+  "risk_duration_bounds": [
+    0.0,
+    3.0
+  ]
+}

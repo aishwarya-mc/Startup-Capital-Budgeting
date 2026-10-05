@@ -1,0 +1,110 @@
+
+score_projects (exit 0)
+       risk_score  strategic_score
+count  100.000000       100.000000
+mean    74.166667        50.000000
+std     27.364348        35.533453
+min     12.500000         0.000000
+25%     54.166667        25.000000
+50%     72.916666        50.000000
+75%    100.000000        75.000000
+max    100.000000       100.000000
+{"rows": 100, "original_columns_unchanged": true, "scores_finite_and_in_range": true, "equal_inputs_equal_risk": true, "risk_monotone_in_each_component": true, "risk_rounds_bounds": [1.0, 5.0], "risk_duration_bounds": [0.0, 3.0]}
+
+
+integer_programming (exit 0)
+  budget model logical_scenario solver_status  solver_solution_status  projects_selected  total_investment  budget_utilization_percent  total_potential  total_risk  total_strategic  objective
+25000000    IP         baseline       Optimal                       1                 24        24929310.0                   99.717240           706.67 1879.166667           1125.0     706.67
+50000000    IP         baseline       Optimal                       1                 34        49980834.0                   99.961668           968.34 2745.833334           1625.0     968.34
+75000000    IP         baseline       Optimal                       1                 40        74989291.0                   99.985721          1184.18 3141.666668           1900.0    1184.18
+25000000    IP    assumed_logic       Optimal                       1                 24        24929310.0                   99.717240           706.67 1879.166667           1125.0     706.67
+50000000    IP    assumed_logic       Optimal                       1                 33        49926434.0                   99.852868           958.34 2633.333334           1475.0     958.34
+75000000    IP    assumed_logic       Optimal                       1                 40        74589291.0                   99.452388          1168.34 3170.833334           1775.0    1168.34
+Validation: 84/84 passed
+
+
+goal_programming (exit 0)
+Solved GP: baseline, $25M
+Solved GP: baseline, $50M
+Solved GP: baseline, $75M
+Solved GP: assumed_logic, $25M
+Solved GP: assumed_logic, $50M
+Solved GP: assumed_logic, $75M
+  budget logical_scenario          priority  projects_selected  total_investment  total_potential  total_risk  total_strategic  objective
+25000000         baseline          balanced                 18        24833829.0           570.01 1337.500001           1225.0   0.357162
+25000000         baseline potential_focused                 24        24929310.0           706.67 1879.166667           1125.0   0.246575
+25000000         baseline      risk_focused                  7        23665331.0           365.84  283.333334            525.0   0.315341
+25000000         baseline  strategy_focused                 21        24635477.0           566.67 1741.666667           1425.0   0.244509
+50000000         baseline          balanced                 25        49897820.0           819.18 1804.166668           1725.0   0.316198
+50000000         baseline potential_focused                 30        49991331.0           938.34 2245.833334           1675.0   0.214670
+50000000         baseline      risk_focused                 10        49304928.0           513.35  408.333335            775.0   0.305699
+50000000         baseline  strategy_focused                 28        49914274.0           807.51 2225.000001           1925.0   0.217781
+75000000         baseline          balanced                 30        74862396.0          1025.02 2087.500002           2000.0   0.318919
+75000000         baseline potential_focused                 37        74756125.0          1147.51 2787.500001           2075.0   0.221297
+75000000         baseline      risk_focused                 12        73820558.0           620.85  470.833335            925.0   0.307168
+75000000         baseline  strategy_focused                 35        74879068.0          1004.18 2766.666668           2325.0   0.219160
+25000000    assumed_logic          balanced                 18        24779429.0           570.01 1337.500001           1200.0   0.357212
+25000000    assumed_logic potential_focused                 24        24929310.0           706.67 1879.166667           1125.0   0.241854
+25000000    assumed_logic      risk_focused                  7        23434328.0           374.18  266.666668            425.0   0.319232
+25000000    assumed_logic  strategy_focused                 22        24515477.0           576.67 1854.166667           1425.0   0.248942
+50000000    assumed_logic          balanced                 24        49826951.0           801.69 1704.166669           1575.0   0.337714
+50000000    assumed_logic potential_focused                 32        49864510.0           941.68 2504.166668           1700.0   0.228469
+50000000    assumed_logic      risk_focused                  9        49025561.0           480.85  333.333335            600.0   0.314839
+50000000    assumed_logic  strategy_focused                 28        49876722.0           753.34 2295.833334           1925.0   0.232339
+75000000    assumed_logic          balanced                 30        74488149.0          1002.52 2100.000002           1925.0   0.325419
+75000000    assumed_logic potential_focused                 37        74984233.0          1124.18 2829.166668           2000.0   0.229085
+75000000    assumed_logic      risk_focused                 10        74376161.0           546.68  379.166668            800.0   0.309348
+75000000    assumed_logic  strategy_focused                 33        74729068.0           935.85 2620.833335           2250.0   0.224462
+Validation: 930/930 passed
+
+
+compare_models (exit 0)
+  budget model  projects_selected  total_potential  total_risk  total_strategic
+25000000    GP                 18           570.01 1337.500001           1225.0
+25000000    IP                 24           706.67 1879.166667           1125.0
+50000000    GP                 25           819.18 1804.166668           1725.0
+50000000    IP                 34           968.34 2745.833334           1625.0
+75000000    GP                 30          1025.02 2087.500002           2000.0
+75000000    IP                 40          1184.18 3141.666668           1900.0
+
+
+sensitivity_analysis (exit 0)
+dimension
+budget                 30
+logic_fixed_targets    12
+logic_recalibrated     15
+priority               18
+Fixed-target GP solutions: 12 ; sector composition rows: 420
+
+
+plot_optimization (exit 0)
+Saved 7 PNG and 7 PDF charts to C:\Users\RITHU\Downloads\Startup-Capital-Budgeting-main\Startup-Capital-Budgeting-main\results\optimization\charts
+
+
+validate_results (exit 0)
+Validated ip: 6 portfolios
+Validated gp: 24 portfolios
+Validated payoff: 18 portfolios
+Validated gp_fixed_targets: 12 portfolios
+VALIDATION: 1586/1586 passed
+
+
+Unit tests (exit 0)
+
+test_empty_portfolio_and_invalid_budget (test_models.ModelTests) ... C:\Users\RITHU\Downloads\Startup-Capital-Budgeting-main\.python_packages\pulp\pulp.py:329: DeprecationWarning: Constructing LpVariable(name, ...) directly is deprecated; in PuLP 4.0 use prob.add_variable(name, lowBound, upBound, cat=...). Variables are then attached to the model when created.
+  _v4_deprecation(msg, stacklevel=2)
+ok
+test_gp_exhaustive_zero_risk_target (test_models.ModelTests) ... ok
+test_invalid_score_inputs_fail (test_models.ModelTests) ... ok
+test_ip_exhaustive_with_and_without_logic (test_models.ModelTests) ... C:\Users\RITHU\Downloads\Startup-Capital-Budgeting-main\.python_packages\pulp\pulp.py:329: DeprecationWarning: Constructing LpVariable(name, ...) directly is deprecated; in PuLP 4.0 use prob.add_variable(name, lowBound, upBound, cat=...). Variables are then attached to the model when created.
+  _v4_deprecation(msg, stacklevel=2)
+ok
+test_scores_do_not_use_outcomes_or_ips (test_models.ModelTests) ... ok
+test_validator_rejects_fractional_and_false_objective (test_models.ModelTests) ... C:\Users\RITHU\Downloads\Startup-Capital-Budgeting-main\.python_packages\pulp\pulp.py:329: DeprecationWarning: Constructing LpVariable(name, ...) directly is deprecated; in PuLP 4.0 use prob.add_variable(name, lowBound, upBound, cat=...). Variables are then attached to the model when created.
+  _v4_deprecation(msg, stacklevel=2)
+ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.262s
+
+OK

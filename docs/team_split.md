@@ -1,5 +1,7 @@
 # Team Split
 
+> Scope update: IP, linear GP, comparison, sensitivity and validation are implemented. UI responsibilities below are historical future planning and are outside this delivery. No NLP is included.
+
 ## Project Team
 
 The project is divided into four major work areas. Each member is responsible for a specific stage of the overall pipeline, while integration is handled collaboratively.

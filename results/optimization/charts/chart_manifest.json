@@ -1,0 +1,24 @@
+{
+  "purpose": "Publication figures derived solely from frozen numerical outputs",
+  "sources": {
+    "ip_vs_gp_comparison.csv": "75ca96d44440de9ef415fdf7abf94b4571d262d7c6dd39d6bbc1f937185ff1d7",
+    "sector_composition.csv": "4225abb1334566ec9b9b739e7120734a6df3dd337ea8ca7fcac255718ba027de",
+    "sensitivity_changes.csv": "dbe0ab0815fe49b3c0bc13b3ea07ddec7a98971821e82267130ee6f1f2c53a9b"
+  },
+  "figures": {
+    "01_budget_potential.pdf": "8aac1ca1bc636e5a11d1f357c139ecc09ba7a3b1574647b17d5b30c9bde6bcb3",
+    "01_budget_potential.png": "46d5f027be0507936f90da4b956e0a17b47a520b4565ecbefeebe60b36202a95",
+    "02_budget_project_count.pdf": "ad2b8dfe4fed95ee85cc1305bd0788901bc778c411f3943a90fd8866c284fbec",
+    "02_budget_project_count.png": "158817b9ad11ece7cc84ef6ab56c0683975994229c58dc154a80ae01c5d21796",
+    "03_ip_vs_gp_performance.pdf": "fb82d19b400c19befbeccab0ee0d72c5699aaccb909f62b7776d6c435c1a2ba6",
+    "03_ip_vs_gp_performance.png": "7d51963867fb19707aed6484ba559633f0f5cb26761dc483b38dcac1334217ba",
+    "04_selected_sectors.pdf": "9e3b3b621bbfea7c5d42bc89a88bd8fa9320d0df2a7a8284a2d14436818b66a3",
+    "04_selected_sectors.png": "b2c426675c98957dfb29cf5e1c84f65925061ca012c0b83c8a25982bfb0eebef",
+    "05_gp_goal_deviations.pdf": "b90974b9cd8422075532bbae4b57e7f28f96230e2cba336756ae7c29b1b5e96d",
+    "05_gp_goal_deviations.png": "dc15dbe8869828aa1d703dc9e9ea09e5faba3fe67535569308a7b9eb2766371e",
+    "06_gp_priority_composition.pdf": "cae9fcad231be2e6ba886eb79571ad02f74f33dcb44b42d27bd158782e91907d",
+    "06_gp_priority_composition.png": "2bba0fdaf06f29b48892ce8ed1cd87ecfbfb96a6bbec43797210a07b0e7a6207",
+    "07_logical_constraint_sensitivity.pdf": "3d3f72e07f81d228da9e15972d72bd4fa2830f7bebf39c0aad59b0af3c074c3b",
+    "07_logical_constraint_sensitivity.png": "b23423fb3d9f5284850f78ca93847cd45bb3e8c434a6cc105b37a094a7fcf248"
+  }
+}

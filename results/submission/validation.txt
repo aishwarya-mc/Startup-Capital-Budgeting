@@ -1,0 +1,5 @@
+Validated ip: 6 portfolios
+Validated gp: 24 portfolios
+Validated payoff: 18 portfolios
+Validated gp_fixed_targets: 12 portfolios
+VALIDATION: 1586/1586 passed

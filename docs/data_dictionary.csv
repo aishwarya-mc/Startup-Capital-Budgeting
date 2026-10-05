@@ -1,0 +1,26 @@
+column,classification,definition,source
+project_id,Derived,Sequential P001-P100 assigned to preserved sample,Preprocessing notebook
+company_id,Dataset-derived,Renamed objects.id,objects.csv (absent)
+startup_name,Dataset-derived,Renamed objects.name,objects.csv (absent)
+sector,Dataset-derived,category_code; missing categories mapped to unknown before sector filter,objects.csv (absent)
+country_code,Dataset-derived,Country; 9 missing values retained,objects.csv (absent)
+status,Dataset-derived,Historical company status,objects.csv (absent)
+founded_at,Dataset-derived,Founding date; 20 missing values retained,objects.csv (absent)
+first_funding_at,Dataset-derived,First historical funding date,objects.csv (absent)
+last_funding_at,Dataset-derived,Last historical funding date,objects.csv (absent)
+first_funding_year,Derived,Calendar year of first_funding_at,first_funding_at
+last_funding_year,Derived,Calendar year of last_funding_at,last_funding_at
+funding_duration_years,Derived,"max(last funding year - first funding year,0); missing -> 0",Funding years
+funding_rounds,Dataset-derived,Number of recorded rounds,objects.csv (absent)
+funding_total_usd,Dataset-derived,Total historical funding USD,objects.csv (absent)
+investment_cost,Derived / modelling assumption,Equal to funding_total_usd; proxy for required investment,funding_total_usd
+acquisition,Dataset-derived indicator,Company ID membership in acquired_object_id; event does not establish success,acquisitions.csv (absent)
+ipo,Dataset-derived indicator,Company ID membership in IPO object_id; event does not establish success,ipos.csv
+funding_band,Derived,Right-closed bins: <=1.5M; <=6.14149M; <=20M; <=100M,funding_total_usd
+rounds_score,Derived,Sample min-max 0-100; constant column ->100,funding_rounds
+duration_score,Derived,Sample min-max 0-100; constant column ->100,funding_duration_years
+status_score,Derived / modelling assumption,ipo100; acquired90; operating70; closed20; other50,status
+outcome_score,Derived / modelling assumption,50*(acquisition+ipo),acquisition and ipo
+investment_potential_score,Derived / modelling assumption,.30*rounds_score+.25*duration_score+.25*status_score+.20*outcome_score; round2,Original IPS preserved
+risk_score,Derived / modelling assumption,.50*(100-N(rounds))+.50*(100-N(duration)); round6,Available history variables; docs/risk_methodology.md
+strategic_score,Decision-maker scenario-derived,Sector lookup; 0-100; identical sector gets identical score,config/model_config.json; not observed Crunchbase data

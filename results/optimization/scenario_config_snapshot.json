@@ -1,0 +1,68 @@
+{
+  "budgets": [
+    25000000,
+    50000000,
+    75000000
+  ],
+  "logical_scenarios": {
+    "baseline": {
+      "description": "No logical relationships imposed",
+      "prerequisites": [],
+      "mutual_exclusions": []
+    },
+    "assumed_logic": {
+      "description": "MODEL ASSUMPTIONS / SCENARIO CONSTRAINTS: original commented examples; not Crunchbase relationships",
+      "prerequisites": [
+        [
+          "P005",
+          "P004"
+        ]
+      ],
+      "mutual_exclusions": [
+        [
+          "P003",
+          "P004"
+        ]
+      ]
+    }
+  },
+  "strategy": {
+    "name": "Hypothetical enterprise-software investor",
+    "classification": "DECISION-MAKER / SCENARIO INPUT, not historical Crunchbase data",
+    "sector_scores": {
+      "software": 100,
+      "enterprise": 100,
+      "web": 75,
+      "mobile": 75,
+      "ecommerce": 50,
+      "hardware": 50,
+      "advertising": 25,
+      "games_video": 25,
+      "biotech": 0,
+      "medical": 0
+    }
+  },
+  "gp_priorities": {
+    "balanced": {
+      "potential": 0.3333333333333333,
+      "risk": 0.3333333333333333,
+      "strategic": 0.3333333333333333
+    },
+    "potential_focused": {
+      "potential": 0.6,
+      "risk": 0.2,
+      "strategic": 0.2
+    },
+    "risk_focused": {
+      "potential": 0.2,
+      "risk": 0.6,
+      "strategic": 0.2
+    },
+    "strategy_focused": {
+      "potential": 0.2,
+      "risk": 0.2,
+      "strategic": 0.6
+    }
+  },
+  "target_method": "Individual-objective ideal targets; risk zero from empty portfolio; payoff risk range normalizes risk excess"
+}

@@ -1,0 +1,17 @@
+test_empty_portfolio_and_invalid_budget (test_models.ModelTests) ... C:\Users\RITHU\Downloads\Startup-Capital-Budgeting-main\.python_packages\pulp\pulp.py:329: DeprecationWarning: Constructing LpVariable(name, ...) directly is deprecated; in PuLP 4.0 use prob.add_variable(name, lowBound, upBound, cat=...). Variables are then attached to the model when created.
+  _v4_deprecation(msg, stacklevel=2)
+ok
+test_gp_exhaustive_zero_risk_target (test_models.ModelTests) ... ok
+test_invalid_score_inputs_fail (test_models.ModelTests) ... ok
+test_ip_exhaustive_with_and_without_logic (test_models.ModelTests) ... C:\Users\RITHU\Downloads\Startup-Capital-Budgeting-main\.python_packages\pulp\pulp.py:329: DeprecationWarning: Constructing LpVariable(name, ...) directly is deprecated; in PuLP 4.0 use prob.add_variable(name, lowBound, upBound, cat=...). Variables are then attached to the model when created.
+  _v4_deprecation(msg, stacklevel=2)
+ok
+test_scores_do_not_use_outcomes_or_ips (test_models.ModelTests) ... ok
+test_validator_rejects_fractional_and_false_objective (test_models.ModelTests) ... C:\Users\RITHU\Downloads\Startup-Capital-Budgeting-main\.python_packages\pulp\pulp.py:329: DeprecationWarning: Constructing LpVariable(name, ...) directly is deprecated; in PuLP 4.0 use prob.add_variable(name, lowBound, upBound, cat=...). Variables are then attached to the model when created.
+  _v4_deprecation(msg, stacklevel=2)
+ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.346s
+
+OK
