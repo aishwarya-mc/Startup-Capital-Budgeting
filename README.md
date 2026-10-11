@@ -2,6 +2,21 @@
 
 Final non-UI academic submission: **Integer Programming and linear weighted Goal Programming** on the same frozen 100 historical startup projects. The mathematical implementation, scores, configuration and numerical results are unchanged during submission finalization.
 
+## Interactive UI (Streamlit)
+
+An interactive studio for the course project requirement: load data, generate statistics on demand, and run either optimisation technique.
+
+```powershell
+python -m pip install -r requirements.txt
+streamlit run app.py
+```
+
+- **Data:** bundled 100-project Crunchbase sample or upload your own CSV (template provided in the app).
+- **Statistics:** on-demand summary, distributions, sector profile, correlations, cost-vs-potential map, efficiency rankings.
+- **Optimize:** Integer Programming (choice of objective) or Goal Programming (weight presets and sliders), budget, sector preferences and prerequisite/exclusion rules.
+- **Compare & Explore:** IP vs all GP priorities, budget sweep with diminishing returns, and a GP trade-off curve.
+- The solver layer is `src/ui_engine.py`; it reuses the frozen model and reproduces the published baseline numbers.
+
 ## Read and present the project
 
 | Material | Purpose |
